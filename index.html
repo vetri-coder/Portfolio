@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Vendhan A A - Portfolio">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Vendhan A A - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <style>
+
+/* ==========================================
+   THEME TOGGLE
+========================================== */
+
+.theme-toggle{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    border-radius:50%;
+    font-size:1.3rem;
+    color:#6366f1;
+    transition:.35s;
+}
+
+.theme-toggle:hover{
+    background:rgba(99,102,241,.15);
+    transform:rotate(20deg);
+}
+
+/* ==========================================
+   SMOOTH TRANSITION
+========================================== */
+
+*{
+    transition:
+        background .35s,
+        color .35s,
+        border-color .35s,
+        box-shadow .35s,
+        transform .35s;
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark-mode{
+    background:#0f172a !important;
+    color:#f8fafc !important;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode .header{
+    background:#111827 !important;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+body.dark-mode .nav_logo{
+    color:#818cf8 !important;
+}
+
+body.dark-mode .nav_link{
+    color:#ffffff !important;
+}
+
+body.dark-mode .nav_link:hover,
+body.dark-mode .active-link{
+    color:#818cf8 !important;
+}
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+body.dark-mode section{
+    background:#0f172a !important;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+body.dark-mode .card,
+body.dark-mode .about_box,
+body.dark-mode .about-card,
+body.dark-mode .about-content,
+body.dark-mode .about_container,
+body.dark-mode .project-card,
+body.dark-mode .project-content,
+body.dark-mode .education-card,
+body.dark-mode .education-content,
+body.dark-mode .timeline-content,
+body.dark-mode .experience-card,
+body.dark-mode .experience-content,
+body.dark-mode .contact-card,
+body.dark-mode .contact-content,
+body.dark-mode .skill_card,
+body.dark-mode .skills_card,
+body.dark-mode .skill_item,
+body.dark-mode .qualification_data,
+body.dark-mode .stat-item{
+
+    background:#1e293b !important;
+    border:1px solid #334155 !important;
+    color:#ffffff !important;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+   ABOUT STATS
+========================================== */
+
+body.dark-mode .about_stats{
+    background:transparent !important;
+}
+
+body.dark-mode .stat-item{
+
+    padding:2rem;
+    border-radius:18px;
+    text-align:center;
+
+}
+
+body.dark-mode .stat-number{
+
+    color:#ffffff !important;
+    font-size:2.5rem;
+    font-weight:700;
+
+}
+
+body.dark-mode .stat-label{
+
+    color:#dbeafe !important;
+    font-size:1rem;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6{
+
+    color:#ffffff !important;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode small{
+
+    color:#d1d5db !important;
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+body.dark-mode a{
+
+    color:#ffffff;
+
+}
+
+body.dark-mode a:hover{
+
+    color:#818cf8;
+
+}
+
+/* ==========================================
+   ICONS
+========================================== */
+
+body.dark-mode i,
+body.dark-mode svg{
+
+    color:#818cf8 !important;
+
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+body.dark-mode input,
+body.dark-mode textarea{
+
+    background:#1e293b !important;
+    color:#ffffff !important;
+    border:1px solid #475569 !important;
+
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+body.dark-mode .button,
+body.dark-mode .btn{
+
+    background:#6366f1 !important;
+    color:#ffffff !important;
+
+}
+
+body.dark-mode .button:hover,
+body.dark-mode .btn:hover{
+
+    background:#7c3aed !important;
+
+}
+
+
+/* ==========================================
+   EDUCATION SECTION
+========================================== */
+
+body.dark-mode .education{
+    background:#0f172a !important;
+}
+
+body.dark-mode .education_container{
+    background:transparent !important;
+}
+
+body.dark-mode .education_timeline{
+    background:transparent !important;
+}
+
+/* Education Card */
+
+body.dark-mode .education_item{
+
+    background:#1e293b !important;
+    border:1px solid #334155 !important;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* Card Content */
+
+body.dark-mode .education_content{
+
+    background:transparent !important;
+
+}
+
+/* Year Badge */
+
+body.dark-mode .education_year{
+
+    background:#6366f1 !important;
+    color:#ffffff !important;
+
+}
+
+/* Heading */
+
+body.dark-mode .education_header h4{
+
+    color:#ffffff !important;
+
+}
+
+/* School Name */
+
+body.dark-mode .education_content h5{
+
+    color:#dbeafe !important;
+
+}
+
+/* Grade */
+
+body.dark-mode .education_grade{
+
+    background:#334155 !important;
+    color:#ffffff !important;
+
+}
+
+/* Location */
+
+body.dark-mode .education_location{
+
+    color:#cbd5e1 !important;
+
+}
+
+body.dark-mode .education_location i{
+
+    color:#818cf8 !important;
+
+}
+
+/* Any remaining text */
+
+body.dark-mode .education_item *{
+
+    color:inherit;
+
+}
+
+body.dark-mode .education_item h4,
+body.dark-mode .education_item h5{
+
+    color:#ffffff !important;
+
+}
+
+body.dark-mode .education_item p,
+body.dark-mode .education_item span{
+
+    color:#cbd5e1 !important;
+
+}
+
+/* Hover */
+
+body.dark-mode .education_item:hover{
+
+    transform:translateY(-8px);
+    background:#273449 !important;
+
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+body.dark-mode .skill-progress{
+
+    background:#334155 !important;
+
+}
+
+body.dark-mode .progress,
+body.dark-mode .progress-bar{
+
+    background:linear-gradient(90deg,#6366f1,#8b5cf6) !important;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+body.dark-mode footer{
+
+    background:#111827 !important;
+    color:#ffffff;
+
+}
+
+/* ==========================================
+   SCROLL BUTTON
+========================================== */
+
+body.dark-mode .scrollup{
+
+    background:#6366f1 !important;
+    color:#423e3e !important;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+body.dark-mode::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+body.dark-mode::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+body.dark-mode::-webkit-scrollbar-thumb{
+
+    background:#6366f1;
+    border-radius:10px;
+
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover{
+
+    background:#8b5cf6;
+
+}
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+body.dark-mode .contact{
+    background:#0f172a !important;
+}
+
+body.dark-mode .contact_container{
+    background:transparent !important;
+}
+
+/* Left Contact Information */
+
+body.dark-mode .contact_info{
+
+    background:#1e293b !important;
+    border:1px solid #334155;
+    border-radius:18px;
+    padding:2rem;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+body.dark-mode .contact_info h3{
+
+    color:#ffffff !important;
+
+}
+
+body.dark-mode .contact_info p{
+
+    color:#cbd5e1 !important;
+
+}
+
+/* Contact Items */
+
+body.dark-mode .contact_item{
+
+    background:#273449 !important;
+    border-radius:12px;
+    padding:1rem;
+    margin-bottom:1rem;
+}
+
+body.dark-mode .contact_item i{
+
+    color:#818cf8 !important;
+    font-size:1.6rem;
+
+}
+
+body.dark-mode .contact_item h4{
+
+    color:#ffffff !important;
+
+}
+
+body.dark-mode .contact_item p,
+body.dark-mode .contact_item a{
+
+    color:#dbeafe !important;
+    text-decoration:none;
+
+}
+
+body.dark-mode .contact_item a:hover{
+
+    color:#818cf8 !important;
+
+}
+
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+body.dark-mode .contact_form{
+
+    background:#1e293b !important;
+    border:1px solid #334155;
+    border-radius:18px;
+    padding:2rem;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* Form Groups */
+
+body.dark-mode .form_group{
+
+    position:relative;
+
+}
+
+/* Input Fields */
+
+body.dark-mode .form_input{
+
+    width:100%;
+    background:#0f172a !important;
+    color:#68676700 !important;
+    border:1px solid #475569 !important;
+    border-radius:10px;
+}
+
+body.dark-mode .form_input:focus{
+
+    border-color:#6366f1 !important;
+    outline:none;
+
+}
+
+body.dark-mode .form_input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/* Labels */
+
+body.dark-mode .form_label{
+
+    color:#484848 !important;
+}
+
+/* Button */
+
+body.dark-mode .button{
+
+    background:#6366f1 !important;
+    color:#0248f8 !important;
+    border:none;
+
+}
+
+body.dark-mode .button:hover{
+
+    background:#7c3aed !important;
+
+}
+
+body.dark-mode .button i{
+
+    color:#ffffff !important;
+
+}
+
+</style>
+</head>
+<body>
+    <!-- Enhanced Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader">
+            <div class="loader-text">
+                <Span>A.</Span>
+                <Span>A.</Span>
+                <span>V</span>
+                <span>E</span>
+                <span>N</span>
+                <span>D</span>
+                <span>H</span>
+                <span>A</span>
+                <span>N</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
+    <!-- Floating Particles Background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav bd_grid">
+            <div>
+                <a href="#" class="nav_logo">
+                    <span class="logo-text">VENDHAN</span>
+                    <div class="logo-underline"></div>
+                </a>
+            </div>
+            <div class="nav_toggle" id="nav_toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            <div class="nav_menu" id="nav_menu">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#home" class="nav_link active">Home</a></li>
+                    <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
+                    <li class="nav_item"><a href="#skills" class="nav_link">Skills</a></li>
+                    <li class="nav_item"><a href="#experience" class="nav_link">Experience</a></li>
+                    <li class="nav_item"><a href="#education" class="nav_link">Education</a></li>
+                    <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="theme-toggle" id="theme-toggle">
+            <i class='bx bx-moon'></i>
+            </div>
+        </nav>
+    </header> 
+
+    <main class="main">
+        <!-- HOME Section-->
+        <section class="home section" id="home" data-aos="fade-up">
+            <div class="home_content">
+                <div class="home_data">
+                    <h1 class="home_title" id="home_title">
+                        Hello, Myself <br>
+                        <span class="home_title-color glitch" data-text="Vendhan">Vendhan</span>
+                        <br>And I'm a <span class="home_title-color" id="sec-text">AI Developer</span>
+                    </h1>
+                    <div class="home_buttons" id="home_buttons" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#contact" class="button button-primary">
+                            <span>Contact Me</span>
+                            <i class='bx bx-send'></i>
+                        </a>
+                        <a href="assest/VendhanAA_Resume.pdf" class="button button-secondary">
+                            <span>Download CV</span>
+                            <i class='bx bx-download'></i>
+                        </a> 
+                    </div>
+                    
+                    <div class="home_social">
+                        <a href="https://github.com/vetri-coder" class="home_social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vendhan-ai-ux/" class="home_social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-linkedin-square'></i>
+                        </a>
+                        <a href="https://www.instagram.com/classy._.champ?igsh=MWc4eHFnYXRscjltbw==" class="home_social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-instagram-alt'></i>
+                        </a> 
+                        <a href="mailto:vendhanv59@gmail.com" class="home_social-icon" data-aos="fade-down" data-aos-delay="300">
+                            <i class='bx bxl-gmail'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rest of the HTML remains unchanged -->
+        <!-- ABOUT Section-->
+        <section class="about section" id="about">
+            <h2 class="section-title" data-aos="fade-down">
+                <span class="title-number"></span>About Me
+            </h2>
+            <div class="about_container bd_grid">
+                <div class="about_img" data-aos="fade-right" data-aos-delay="250">
+                    <div class="img-container">
+                        <img src="assest/vendhan.png" alt="Vendhan A A">
+                        <div class="img-overlay"></div>
+                    </div>
+                </div>
+                <div class="about_content" data-aos="fade-left" data-aos-delay="350">
+                    <h2 class="about_subtitle">I'm <span class="home_title-color">Vendhan A A</span></h2>
+                    <p class="about_text">
+                        I'm a passionate and self-driven individual with a strong foundation in coding and web development. I thrive on exploring new technologies and creative ideas, constantly pushing my boundaries to learn and innovate. With an insatiable curiosity for the digital world, I'm always on a journey of continuous learning, embracing every opportunity to grow, adapt, and contribute meaningful solutions to real-world challenges.
+                    </p>
+                    <div class="about_stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="8">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">Internships</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="4">0</span>
+                            <span class="stat-label">Workshops</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS Section-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title" data-aos="fade-right">
+                <span class="title-number"></span>Skills & Expertise
+            </h2>
+            <div class="skills_container bd_grid">
+                <div class="skills_wrapper">
+                    <h3 class="skills_subtitle" data-aos="fade-right" data-aos-delay="100">Technical Skills</h3>
+                    <div class="skills_grid">
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="skill_icon">
+                                <i class='bx bxl-html5'></i>
+                            </div>
+                            <h4>HTML5</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="90"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="skill_icon">
+                                <i class='bx bxl-css3'></i>
+                            </div>
+                            <h4>CSS3</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="skill_icon">
+                                <i class='bx bxl-javascript'></i>
+                            </div>
+                            <h4>JavaScript</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="80"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="skill_icon">
+                                <i class='bx bxl-figma'></i>
+                            </div>
+                            <h4>Figma</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="95"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="600">
+                            <div class="skill_icon">
+                                <i class='bx bx-palette'></i>
+                            </div>
+                            <h4>Canva</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="90"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="skill_icon">
+                                <i class='bx bxl-java'></i>
+                            </div>
+                            <h4>Java</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="skill_icon">
+                                <i class='bx bxl-flutter'></i>
+                            </div>
+                            <h4>Flutter</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="skill_icon">
+                                <i class='bx bxl-firebase'></i>
+                            </div>
+                            <h4>Firebase</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="skill_icon">
+                                <i class='bx bxl-flutter'></i>
+                            </div>
+                            <h4>Flutterflow</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="85"></div>
+                            </div>
+                        </div>
+                         <div class="skill_card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="skill_icon">
+                                <i class='bx bxl-adobe'></i>
+                            </div>
+                            <h4>Photoshop</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="skill_icon">
+                                <i class='bx bxl-adobe'></i>
+                            </div>
+                            <h4>Illustrator</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill_card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="skill_icon">
+                            <i class='bx bx-bar-chart-alt-2'></i>
+                            </div>
+                            <h4>Power BI</h4>
+                            <div class="skill_bar">
+                                <div class="skill_level" data-level="75"></div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE Section-->
+        <section class="experience section" id="experience">
+            <h2 class="section-title" data-aos="fade-right">
+                <span class="title-number"></span>Experience & Projects
+            </h2>
+            
+            <!-- Internships -->
+            <div class="experience_container bd_grid">
+                <h3 class="experience_subtitle" data-aos="fade-right" data-aos-delay="100">Internships</h3>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Mobile App Developer Intern</h4>
+                                <span class="timeline-company">Imagivite Technology Pvt Ltd</span>
+                            </div>
+                            <div class="timeline-info">
+                                <span class="timeline-location">
+                                    <i class='bx bx-map'></i>Tiruchengode
+                                </span>
+                                <span class="timeline-date">
+                                    <i class='bx bx-calendar'></i>01.05.2025 - 30.06.2025
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Graphic Designer</h4>
+                                <span class="timeline-company">Statix.pro</span>
+                            </div>
+                            <div class="timeline-info">
+                                <span class="timeline-location">
+                                    <i class='bx bx-map'></i>Tiruchengode
+                                </span>
+                                <span class="timeline-date">
+                                    <i class='bx bx-calendar'></i>01.02.2025 - 31.03.2025
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Artificial Intelligence Intern (LLM and RAG)</h4>
+                                <span class="timeline-company">Infosys SpringBoard</span>
+                            </div>
+                            <div class="timeline-info">
+                                <span class="timeline-location">
+                                    <i class='bx bx-map'></i>Online
+                                </span>
+                                <span class="timeline-date">
+                                    <i class='bx bx-calendar'></i>01.11.2024 - 31.01.2025
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Graphic Designer</h4>
+                                <span class="timeline-company">K S Rangasamy College of Arts and Science</span>
+                            </div>
+                            <div class="timeline-info">
+                                <span class="timeline-location">
+                                    <i class='bx bx-map'></i>Tiruchengode
+                                </span>
+                                <span class="timeline-date">
+                                    <i class='bx bx-calendar'></i>15.08.2023 - 15.05.2026
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <h3 class="experience_subtitle" data-aos="fade-right" data-aos-delay="600">Featured Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                        <div class="project-header">
+                            <i class='bx bx-brain project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://github.com/vetri-coder/infosys-assignment" class="project-link"><i class='bx bx-link-external'></i></a>
+                                <a href="https://github.com/vetri-coder/infosys-assignment" class="project-link"><i class='bx bxl-github'></i></a>
+                            </div>                                                                                                                                    
+                        </div>
+                        <div class="project-content">
+                            <h4>AI Sales Intelligence</h4>
+                            <p>AI Sales Intelligence is a web application that uses natural language processing and machine learning to analyze sales data and provide insights to sales teams. 
+                                This project captures live voice input, analyzes sentiment and intent, and provides deal recommendations using Google Gemini API.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Google Gemini API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                        <div class="project-header">
+                            <i class='bx bx-library project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://github.com/vetri-coder/LMS" class="project-link"><i class='bx bx-link-external'></i></a>
+                                <a href="https://github.com/vetri-coder/LMS" class="project-link"><i class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Library Management System</h4>
+                            <p>A fully functional library management system built with HTML, CSS, and JavaScript to streamline book management. 
+                                Features include user authentication, book search by language, borrowing and returning books, and a responsive UI with a horizontal box-based layout for easy navigation.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+                        <div class="project-header">
+                            <i class='bx bx-bot project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://github.com/vetri-coder/jarvis" class="project-link"><i class='bx bx-link-external'></i></a>
+                                <a href="https://github.com/vetri-coder/jarvis" class="project-link"><i class='bx bxl-github'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Jarvis Assistant</h4>
+                            <p>An AI-powered voice assistant with natural language processing and task automation capabilities.
+                                Jarvis AI is an advanced virtual assistant designed for real-time interaction and automation.
+                                Built with cutting-edge Natural Language Processing (NLP), Machine Learning (ML), and Voice Recognition.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Voice Recognition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+                        <div class="project-header">
+                            <i class='bx bxl-whatsapp project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/UqNgwWDxcT1KGnIHqoUUOt/whatsapp-1?node-id=5-659&t=701RHkj8RwIBdMQS-1" class="project-link"><i class='bx bx-link-external'></i></a>
+                                <a href="https://www.figma.com/design/UqNgwWDxcT1KGnIHqoUUOt/whatsapp-1?node-id=5-659&t=701RHkj8RwIBdMQS-1" class="project-link"><i class='bx bxl-figma'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>WhatsApp Recreation</h4>
+                            <p>A modern and responsive WhatsApp clone designed using Figma. This project showcases a pixel-perfect recreation of WhatsApp's interface with attention to detail in every element.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">UI/UX Design</span>
+                                <span class="tech-tag">Wireframing</span>
+                                <span class="tech-tag">Prototyping</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+                        <div class="project-header">
+                            <i class='bx bxs-group project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/Xlu4AZQxQ3ggVDvqMaFj1I/DEWED-CLUB-WEBSITE?node-id=0-1&t=4m3FbT79nkwCbhhz-1" class="project-link"><i class='bx bx-link-external'></i></a>
+                                <a href="https://www.figma.com/design/Xlu4AZQxQ3ggVDvqMaFj1I/DEWED-CLUB-WEBSITE?node-id=0-1&t=4m3FbT79nkwCbhhz-1" class="project-link"><i class='bx bxl-figma'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Club Website UI Design</h4>
+                            <p>Designed a static user interface for a college club website using Figma, focusing on clean layout, intuitive navigation, and visual consistency to represent the club's vision and activities.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">UI/UX Design</span>
+                                <span class="tech-tag">Wireframing</span>
+                                <span class="tech-tag">Prototyping</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+                        <div class="project-header">
+                            <i class='bx bx-calendar project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/1uvsiuG2Ji71YlSwHyYzGu/Booking-App?node-id=49-1621&t=npvX3g2JzLF2M4Np-1" class="project-link"><i class='bx bx-link-external'></i></a>
+                                <a href="https://www.figma.com/design/1uvsiuG2Ji71YlSwHyYzGu/Booking-App?node-id=49-1621&t=npvX3g2JzLF2M4Np-1" class="project-link"><i class='bx bxl-figma'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Booking App UI Design</h4>
+                            <p>Designed a modern user interface for a booking app using Figma, focusing on clean layout, intuitive navigation, and visual consistency. The project emphasizes minimalism and responsive design principles.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">UI/UX Design</span>
+                                <span class="tech-tag">Wireframing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+                        <div class="project-header">
+                            <i class='bx bx-clipboard project-icon'></i>
+                            <div class="project-links">
+                                <a href="https://github.com/vetri-coder/Complaint_Filing_System" class="project-link"><i class='bx bx-link-external'></i></a>
+                                <a href="https://www.figma.com/design/W6kQSoMbt3gNAaI4zZtvvW/final-year?node-id=0-1&t=W1YQj24aO9AJk7GT-1" class="project-link"><i class='bx bxl-figma'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                        <h4>Complaint Filing System for Garbage Management</h4>
+                        <p>Developed a web-based complaint management system that enables citizens to report garbage-related issues with image proof and location details. The system features secure role-based authentication, complaint tracking, unique complaint IDs, real-time status updates, and an admin dashboard for efficient complaint management. Built using modern web technologies with Firebase for authentication, database, and cloud storage.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Web Developement</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">User and Admin Portal</Portal></span>
+                            <span class="tech-tag">Firebase Auth</span>
+                            <span class="tech-tag">Firebase Storage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </section>
+
+        <!-- EDUCATION Section-->
+        <section class="education section" id="education">
+            <h2 class="section-title" data-aos="fade-down">
+                <span class="title-number"></span>Education
+            </h2>
+            <div class="education_container bd_grid">
+                <div class="education_timeline">
+                    <div class="education_item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="education_year">2020-2021</div>
+                        <div class="education_content">
+                            <div class="education_header">
+                                <h4>Secondary School</h4>
+                                <div class="education_grade">All Pass</div>
+                            </div>
+                            <h5>SSV Matric Hr Sec School</h5>
+                            <p class="education_location">
+                                <i class='bx bx-map'></i>Sivagiri, Erode(Dt).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education_item" data-aos="fade-right" data-aos-delay="400">
+                        <div class="education_year">2022-2023</div>
+                        <div class="education_content">
+                            <div class="education_header">
+                                <h4>Higher Secondary School</h4>
+                                <div class="education_grade">86.94%</div>
+                            </div>
+                            <h5>Government Higher Secondary School</h5>
+                            <p class="education_location">
+                                <i class='bx bx-map'></i>Thamaraipalayam, Erode(Dt).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education_item" data-aos="fade-right" data-aos-delay="600">
+                        <div class="education_year">2023-2026</div>
+                        <div class="education_content">
+                            <div class="education_header">
+                                <h4>Bachelor of Computer Applications</h4>
+                                <div class="education_grade">8.543 CGPA</div>
+                            </div>
+                            <h5>K S Rangasamy College of Arts and Science</h5>
+                            <p class="education_location">
+                                <i class='bx bx-map'></i>Tiruchengode, Namakkal(Dt)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT Section-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title" data-aos="fade-down">
+                <span class="title-number"></span>Get In Touch
+            </h2>
+            <div class="contact_container bd_grid">
+                <div class="contact_info" data-aos="fade-right" data-aos-delay="200">
+                    <h3>Let's work together!</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    
+                    <div class="contact_details">
+                        <div class="contact_item">
+                            <i class='bx bx-envelope'></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:vendhanv59@gmail.com">vendhanv59@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact_item">
+                            <i class='bx bx-map'></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p><a href="https://www.google.com/maps/place/Erode,+Tamil+Nadu/@11.166666666666666,78.16666666666667,12z/data=!3m1!4b1!4m5!3m4!1s0x3b01a9b6b6b6b6b6:0x3b01a9b6b6b6b6b6!8m2!3d11.166666666666666!4d78.16666666666667">Erode, Tamil Nadu</a></p>
+                            </div>
+                        </div>
+                        <div class="contact_item">
+                            <i class='bx bx-phone'></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+919787623265">+91 9787623265</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact_form" data-aos="fade-left" data-aos-delay="400" onsubmit="SendEmail(event)">
+                    <div class="form_group">
+                        <input type="text" id="name" name="name" class="form_input" required>
+                        <label class="form_label">Name</label>
+                    </div>
+                    <div class="form_group">
+                        <input type="email" id="email" name="email" class="form_input" required>
+                        <label class="form_label">Email</label>
+                    </div>
+                    <div class="form_group">
+                        <input type="text" id="subject" name="subject" class="form_input" required>
+                        <label class="form_label">Subject</label>
+                    </div>
+                    <div class="form_group">
+                        <textarea id="message" name="message" class="form_input form_textarea" rows="6" required></textarea>
+                        <label class="form_label">Message</label>
+                    </div>
+                    <button type="submit" class="button button-primary">
+                        <span>Send Message</span>
+                        <i class='bx bx-send'></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer_container bd_grid">
+            <div class="footer_content" data-aos="fade-up">
+                <h3 class="footer_title">Vendhan A A</h3>
+                <p class="footer_description">
+                    Passionate developer creating digital experiences that matter.
+                </p>
+                <div class="footer_socials">
+                    <a href="https://github.com/vetri-coder" class="footer_social" data-tooltip="GitHub">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vendhan-ai-ux/" class="footer_social" data-tooltip="LinkedIn">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                    <a href="https://www.instagram.com/classy._.champ?igsh=MWc4eHFnYXRscjltbw==" class="footer_social" data-tooltip="Instagram">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="mailto:vendhanv59@gmail.com" class="footer_social" data-tooltip="Email">
+                        <i class='bx bxl-gmail'></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer_bottom" id="footer">
+                <p>&copy; 2025 Vendhan A A. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="script.js"></script>
+    <!-- EmailJS Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "IgS2boI8jUR_iYPcA"
+            });
+        })();
+    </script>
+    <!-- Form Submit Script -->
+    <script type="text/javascript">
+        let isSubmitting = false;
+
+        function SendEmail(event) {
+            if (isSubmitting) {
+                return;
+            }
+            
+            event.preventDefault();
+            isSubmitting = true;
+
+            const templateParams = {
+                name: document.querySelector("#name").value,
+                email: document.querySelector("#email").value,
+                subject: document.querySelector("#subject").value,
+                message: document.querySelector("#message").value,
+            };
+
+            emailjs.send("service_t4llygd", "template_tdfamua", templateParams)
+                .then(() => {
+                    alert('Email sent successfully!');
+                    event.target.reset();
+                    isSubmitting = false;
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                    alert('Error sending email. Please try again.');
+                    isSubmitting = false;
+                });
+        }
+    </script>
+</body>
+</html>
